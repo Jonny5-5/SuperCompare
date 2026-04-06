@@ -44,7 +44,7 @@ export class SuperCalculator {
      * Compares user's build against historical supercomputers
      */
     static compareBuild(build: ComputerBuild): SupercomputerComparison {
-        if (!build.cpu || !build.gpu || !build.ram || !build.storage) {
+        if (!build.cpu || !build.gpu || !build.ram || !build.storageSizeId || !build.storageTypeId) {
             throw new Error("All components must be selected for comparison");
         }
 
